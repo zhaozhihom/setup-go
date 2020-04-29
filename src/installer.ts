@@ -65,7 +65,7 @@ export async function findMatch(
   let result: IGoVersion | undefined;
   let match: IGoVersion | undefined;
 
-  const dlUrl: string = 'https://golang.org/dl/?mode=json&include=all';
+  const dlUrl: string = 'https://goproxy.io/dl/?mode=json&include=all';
   let candidates: IGoVersion[] | null = await module.exports.getVersions(dlUrl);
   if (!candidates) {
     throw new Error(`golang download url did not return results`);
