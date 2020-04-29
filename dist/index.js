@@ -4692,7 +4692,7 @@ function findMatch(versionSpec, stable) {
         let platFilter = sys.getPlatform();
         let result;
         let match;
-        const dlUrl = 'https://golang.org/dl/?mode=json&include=all';
+        const dlUrl = 'https://goproxy.io/dl/?mode=json&include=all';
         let candidates = yield module.exports.getVersions(dlUrl);
         if (!candidates) {
             throw new Error(`golang download url did not return results`);
